@@ -191,27 +191,27 @@ plt.show()
 ```
 Statistics for RM
 
-Minimum RM: $3.5610000000000004
-Maximum RM: $8.398
-Mean RM: $6.240288343558283
-Median RM $6.185
-Standard deviation of RMs: $0.6429912973544311
+--Minimum RM: $3.5610000000000004
+--Maximum RM: $8.398
+--Mean RM: $6.240288343558283
+--Median RM $6.185
+--Standard deviation of RMs: $0.6429912973544311
 -----------------------------------------------------
 Statistics for LSTAT
 
-Minimum LSTAT: $1.98
-Maximum LSTAT: $37.97
-Mean LSTAT: $12.93963190184049
-Median LSTAT $11.69
-Standard deviation of LSTATs: $7.074744784826815
+--Minimum LSTAT: $1.98
+--Maximum LSTAT: $37.97
+--Mean LSTAT: $12.93963190184049
+--Median LSTAT $11.69
+--Standard deviation of LSTATs: $7.074744784826815
 -----------------------------------------------------
 Statistics for PTRATIO
 
-Minimum PTRATIO: $12.6
-Maximum PTRATIO: $22.0
-Mean PTRATIO: $18.51656441717791
-Median PTRATIO $6.185
-Standard deviation of PTRATIOs: $2.10910763761277
+--Minimum PTRATIO: $12.6
+--Maximum PTRATIO: $22.0
+--Mean PTRATIO: $18.51656441717791
+--Median PTRATIO $6.185
+--Standard deviation of PTRATIOs: $2.10910763761277
 -----------------------------------------------------
 Predicted selling price for Client 1's home: $403,025.00
 Predicted selling price for Client 2's home: $237,478.72
@@ -228,17 +228,17 @@ The `fit_model` function is run ten times with different training and testing se
 vs.PredictTrials(features, prices, fit_model, client_data)
 ```
 
-- Trial 1: $324,240.00
-- Trial 2: $324,450.00
-- Trial 3: $346,500.00
+- Trial 1: $391,183.33
+- Trial 2: $419,700.00
+- Trial 3: $415,800.00
 - Trial 4: $420,622.22
-- Trial 5: $302,400.00
+- Trial 5: $418,377.27
 - Trial 6: $411,931.58
-- Trial 7: $344,750.00
+- Trial 7: $399,663.16
 - Trial 8: $407,232.00
-- Trial 9: $352,315.38
-- Trial 10: $316,890.00
+- Trial 9: $351,577.61
+- Trial 10: $413,700.00
  
-**Range in prices: $118,222.22**
+**Range in prices: $69,044.61**
 
 **Limitations** The constructed model isn't suitable for the real world setting as it misses out on a lot of important features such as the nature of neighborhood, the age of the house, the crime rate of the neighborhood etc. Real-world would be much more complex as people tend to take into account many other while choosing a home. However, the size of the data would need to be correspondingly larger due to the ```Curse of Dimensionality```.

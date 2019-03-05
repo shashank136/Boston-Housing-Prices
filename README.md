@@ -226,7 +226,9 @@ Median PTRATIO $6.185
 Standard deviation of PTRATIOs: $2.10910763761277
 -----------------------------------------------------
 Predicted selling price for Client 1's home: $403,025.00
+
 Predicted selling price for Client 2's home: $237,478.72
+
 Predicted selling price for Client 3's home: $931,636.36
 
 ![png](extras/stats.png)

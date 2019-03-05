@@ -191,27 +191,39 @@ plt.show()
 ```
 Statistics for RM
 
---Minimum RM: $3.5610000000000004
---Maximum RM: $8.398
---Mean RM: $6.240288343558283
---Median RM $6.185
---Standard deviation of RMs: $0.6429912973544311
+Minimum RM: $3.5610000000000004
+
+Maximum RM: $8.398
+
+Mean RM: $6.240288343558283
+
+Median RM $6.185
+
+Standard deviation of RMs: $0.6429912973544311
 -----------------------------------------------------
 Statistics for LSTAT
 
---Minimum LSTAT: $1.98
---Maximum LSTAT: $37.97
---Mean LSTAT: $12.93963190184049
---Median LSTAT $11.69
---Standard deviation of LSTATs: $7.074744784826815
+Minimum LSTAT: $1.98
+
+Maximum LSTAT: $37.97
+
+Mean LSTAT: $12.93963190184049
+
+Median LSTAT $11.69
+
+Standard deviation of LSTATs: $7.074744784826815
 -----------------------------------------------------
 Statistics for PTRATIO
 
---Minimum PTRATIO: $12.6
---Maximum PTRATIO: $22.0
---Mean PTRATIO: $18.51656441717791
---Median PTRATIO $6.185
---Standard deviation of PTRATIOs: $2.10910763761277
+Minimum PTRATIO: $12.6
+
+Maximum PTRATIO: $22.0
+
+Mean PTRATIO: $18.51656441717791
+
+Median PTRATIO $6.185
+
+Standard deviation of PTRATIOs: $2.10910763761277
 -----------------------------------------------------
 Predicted selling price for Client 1's home: $403,025.00
 Predicted selling price for Client 2's home: $237,478.72

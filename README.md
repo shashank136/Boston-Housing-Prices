@@ -200,6 +200,7 @@ Mean RM: $6.240288343558283
 Median RM $6.185
 
 Standard deviation of RMs: $0.6429912973544311
+
 -----------------------------------------------------
 Statistics for LSTAT
 
@@ -212,6 +213,7 @@ Mean LSTAT: $12.93963190184049
 Median LSTAT $11.69
 
 Standard deviation of LSTATs: $7.074744784826815
+
 -----------------------------------------------------
 Statistics for PTRATIO
 
@@ -224,6 +226,7 @@ Mean PTRATIO: $18.51656441717791
 Median PTRATIO $6.185
 
 Standard deviation of PTRATIOs: $2.10910763761277
+
 -----------------------------------------------------
 Predicted selling price for Client 1's home: $403,025.00
 

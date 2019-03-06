@@ -106,48 +106,9 @@ client_data = [[5, 17, 15], # Client 1
 
 import numpy as np
 
-rm_max = np.amax(features['RM'])
-rm_min = np.amin(features['RM'])
-rm_mean = np.mean(features['RM'])
-rm_median = np.median(features['RM'])
-rm_std = np.std(features['RM'])
-
-print("Statistics for RM\n")
-print("Minimum RM: ${}".format(rm_min)) 
-print("Maximum RM: ${}".format(rm_max))
-print("Mean RM: ${}".format(rm_mean))
-print("Median RM ${}".format(rm_median))
-print("Standard deviation of RMs: ${}".format(rm_std))
-print('-----------------------------------------------------')
-
-lstat_max = np.amax(features['LSTAT'])
-lstat_min = np.amin(features['LSTAT'])
-lstat_mean = np.mean(features['LSTAT'])
-lstat_median = np.median(features['LSTAT'])
-lstat_std = np.std(features['LSTAT'])
-
-print("Statistics for LSTAT\n")
-print("Minimum LSTAT: ${}".format(lstat_min)) 
-print("Maximum LSTAT: ${}".format(lstat_max))
-print("Mean LSTAT: ${}".format(lstat_mean))
-print("Median LSTAT ${}".format(lstat_median))
-print("Standard deviation of LSTATs: ${}".format(lstat_std))
-print('-----------------------------------------------------')
-
-r_max = np.amax(features['PTRATIO'])
-r_min = np.amin(features['PTRATIO'])
-r_mean = np.mean(features['PTRATIO'])
-r_median = np.median(features['PTRATIO'])
-r_std = np.std(features['PTRATIO'])
-
-print("Statistics for PTRATIO\n")
-print("Minimum PTRATIO: ${}".format(r_min)) 
-print("Maximum PTRATIO: ${}".format(r_max))
-print("Mean PTRATIO: ${}".format(r_mean))
-print("Median PTRATIO ${}".format(rm_median))
-print("Standard deviation of PTRATIOs: ${}".format(r_std))
-
-print('-----------------------------------------------------')
+print('Stats for RM, LSTAT, PTRATIO\n')
+print(features.describe())
+print()
 
 # Show predictions
 for i, price in enumerate(reg.predict(client_data)):
@@ -187,47 +148,34 @@ for i in client_data:
             axes[2].scatter(j, reg.predict([i]), color='red', s=150, marker='X')
             count =0 
 
+plt.figure(figsize=(20, 5))
+y_ax = [[3,9],[0,40],[11,23]]
+for i, col in enumerate(features.columns):
+    plt.subplot(1, 3, i+1)
+    plt.boxplot(data[col])
+    plt.title(col)
+    for j in range(3):
+        plt.plot(1, client_data[j][i], marker="o")
+        plt.annotate('Client '+str(j+1), xy=(1,client_data[j][i]))
+        plt.ylim(y_ax[i])
+        
 plt.show()
+
+print('\n Box and whiskers diagram for client features compared to the interquartile range, median and whiskers \n')
 ```
-Statistics for RM
+Statistics for RM, LSTAT, PTRATIO
 
-Minimum RM: $3.5610000000000004
+               RM       LSTAT     PTRATIO
+count  489.000000  489.000000  489.000000
+mean     6.240288   12.939632   18.516564
+std      0.643650    7.081990    2.111268
+min      3.561000    1.980000   12.600000
+25%      5.880000    7.370000   17.400000
+50%      6.185000   11.690000   19.100000
+75%      6.575000   17.120000   20.200000
+max      8.398000   37.970000   22.000000
 
-Maximum RM: $8.398
 
-Mean RM: $6.240288343558283
-
-Median RM $6.185
-
-Standard deviation of RMs: $0.6429912973544311
-
------------------------------------------------------
-Statistics for LSTAT
-
-Minimum LSTAT: $1.98
-
-Maximum LSTAT: $37.97
-
-Mean LSTAT: $12.93963190184049
-
-Median LSTAT $11.69
-
-Standard deviation of LSTATs: $7.074744784826815
-
------------------------------------------------------
-Statistics for PTRATIO
-
-Minimum PTRATIO: $12.6
-
-Maximum PTRATIO: $22.0
-
-Mean PTRATIO: $18.51656441717791
-
-Median PTRATIO $6.185
-
-Standard deviation of PTRATIOs: $2.10910763761277
-
------------------------------------------------------
 Predicted selling price for Client 1's home: $403,025.00
 
 Predicted selling price for Client 2's home: $237,478.72
@@ -235,6 +183,7 @@ Predicted selling price for Client 2's home: $237,478.72
 Predicted selling price for Client 3's home: $931,636.36
 
 ![png](extras/stats.png)
+![png](extras/stats_2.png)
 
 **Sensitivity**
 An optimal model is not necessarily a robust model. Sometimes, a model is either too complex or too simple to sufficiently generalize to new data. Sometimes, a model could use a learning algorithm that is not appropriate for the structure of the data given. Other times, the data itself could be too noisy or contain too few samples to allow a model to adequately capture the target variable — i.e., the model is underfitted. 

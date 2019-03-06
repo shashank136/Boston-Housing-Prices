@@ -183,7 +183,7 @@ Predicted selling price for Client 2's home: $237,478.72
 Predicted selling price for Client 3's home: $931,636.36
 
 ![png](extras/stats.png)
-![png](extras/stats_2.png)
+![png](extras/stats_2.PNG)
 
 **Sensitivity**
 An optimal model is not necessarily a robust model. Sometimes, a model is either too complex or too simple to sufficiently generalize to new data. Sometimes, a model could use a learning algorithm that is not appropriate for the structure of the data given. Other times, the data itself could be too noisy or contain too few samples to allow a model to adequately capture the target variable — i.e., the model is underfitted. 

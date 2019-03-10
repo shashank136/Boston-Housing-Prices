@@ -6,7 +6,7 @@ This project applies  basic machine learning concepts on data collected for hous
 
 This project uses the following software and Python libraries:
 
-- Python 2.7
+- Python 3.6
 - NumPy
 - pandas
 - matplotlib

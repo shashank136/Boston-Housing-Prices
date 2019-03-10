@@ -163,6 +163,7 @@ plt.show()
 
 print('\n Box and whiskers diagram for client features compared to the interquartile range, median and whiskers \n')
 ```
+```json
 Statistics for RM, LSTAT, PTRATIO
 
                RM       LSTAT     PTRATIO
@@ -174,7 +175,7 @@ min      3.561000    1.980000   12.600000
 50%      6.185000   11.690000   19.100000
 75%      6.575000   17.120000   20.200000
 max      8.398000   37.970000   22.000000
-
+```json
 
 Predicted selling price for Client 1's home: $403,025.00
 
